@@ -3,7 +3,7 @@ import Search from './Search'
 import Result from './Result'
 import axios from "axios"
 import RecentCity from './RecentCity';
-import { styled } from 'styled-components';
+
 
 export default class Weather extends Component {
   constructor(props){
@@ -37,8 +37,12 @@ export default class Weather extends Component {
         })
         this.setState({recent},()=>{
           window.localStorage.setItem("recent",JSON.stringify(this.state.recent))
-        } );
-        
+        } ); 
+      }
+      removeAllDataToREcent=()=>{
+        this.setState({recent:[]},()=>{
+          window.localStorage.clear();
+        } ); 
       }
       ResearchHandler=(lat,lon)=>{
         axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=650e1c4c5e2e4e0ea9fd4b9afae737ea`)
@@ -50,11 +54,10 @@ export default class Weather extends Component {
                               }) ;
       }
       componentDidMount(){
-        const data = window.localStorage.getItem("recent");
-        let recent=data===null?[]:JSON.parse(data);
+        let data = window.localStorage.getItem("recent");
+        data=JSON.parse(data)
+        let recent=(data===null)?[]:data;
         this.setState({recent})
-        
-        
       }
       locationHandler=()=>{
         this.setState({
@@ -74,7 +77,6 @@ export default class Weather extends Component {
                     .then((Results)=>{
                       this.setState({city:Results.data.name,weatherData:Results.data,Showdata:true,
                         },()=>{
-                          console.log(Result.coords.latitude)
                         this.addDataToRecent();
                       })
                     }).catch((error)=>{
@@ -134,7 +136,7 @@ export default class Weather extends Component {
                     location={this.locationHandler}
                     Search={this.SearchHandler}
                     ></Search>
-                    <RecentCity recent={this.state.recent} research={this.ResearchHandler}></RecentCity>
+                    <RecentCity recent={this.state.recent} research={this.ResearchHandler} removeData={this.removeAllDataToREcent}></RecentCity>
                     <Result Showdata={this.state.Showdata} weatherData={this.state.weatherData}></Result>                                          
                 </div>    
             </div>

@@ -2,7 +2,6 @@ import React from "react";
 import Loder from "./Loder";
 import { styled } from "styled-components";
 import { CiTempHigh } from "react-icons/ci";
-import {BsFillSunriseFill,BsFillSunsetFill } from "react-icons/bs";
 
 export default function Result(props) {
   const { weatherData: data } = props;
@@ -13,10 +12,7 @@ export default function Result(props) {
     const d = new Date(s * 1000);
     return d.toLocaleString();
   }
-  function currentDate() {
-    const date = new Date();
-    return date.toLocaleString();
-  }
+  
   let ShowData;
 
   if (data == null) {
@@ -49,6 +45,7 @@ export default function Result(props) {
         </Temp>
 
         <Table>
+        <tbody>
           <tr>
             <th></th>
             <th></th>
@@ -70,6 +67,7 @@ export default function Result(props) {
             <td>Sun Set</td>
             <td>{data?.sys.sunset ? <>{getThedate(data?.sys.sunset)}</> : ""}</td>
           </tr>
+          </tbody>
         </Table>
       </WeatherResult>
     );
@@ -78,9 +76,10 @@ export default function Result(props) {
 }
 const WeatherResult = styled.section`
   width: 60%;
+  min-width: 350px;
   margin: 40px auto;
   border-radius: 20px;
-  background: rgba(5, 5, 5, 0.5);
+  background: rgba(0, 0, 0, 0.2);
   .icon{
     font-size:50px;
     color:white;
@@ -115,7 +114,7 @@ const Table = styled.table`
   width: 100%;
   text-align: center;
   td{
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 400;
     color: white;
     height: 20px;

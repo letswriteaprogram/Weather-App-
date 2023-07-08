@@ -15,7 +15,7 @@ export default function Search(props) {
 <CordinateSearch>
 <label htmlFor="cordinate"><span>Get Cordinate</span> </label>
 <Button onClick={props.location}>
-<i class="fa-solid fa-location-crosshairs icon" ></i>
+<i className="fa-solid fa-location-crosshairs icon" ></i>
 </Button>
 </CordinateSearch>
 
