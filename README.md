@@ -24,9 +24,8 @@
     <li>Axios</li>
     <li>Local Storage</li>
 </ul>
-<h2 align="center">mobile view of web App</h2> 
 
- <img src="https://github.com/letswriteaprogram/Weather-App-/blob/main/public/assets/images/Untitled.jpg?raw=true" alt="Application image" align="center"> 
-
+<br>
+<h1 align="center">Thankyou for visit us </h1>
 <br>
 <br>
