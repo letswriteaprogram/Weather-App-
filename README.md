@@ -1,10 +1,9 @@
-<h1>Project Title: Weather Web App</h1>
+<h1 >Project Title: Weather Web App</h1>
+<h2 align="center">Desktop view of web App</h2> 
 
-<h2>Desktop view of web App</h2>
+ <img src="https://github.com/letswriteaprogram/Weather-App-/blob/main/public/assets/images/Untitled.jpg?raw=true" alt="Application image" align="center"> 
 
-<img src="https://github.com/letswriteaprogram/Weather-App-/blob/main/public/assets/images/Untitled.jpg?raw=true" alt="Application image">
 <br>
-<hr>
 <br>
 <h2>Key Features</h2>
 
@@ -25,3 +24,9 @@
     <li>Axios</li>
     <li>Local Storage</li>
 </ul>
+<h2 align="center">mobile view of web App</h2> 
+
+ <img src="https://github.com/letswriteaprogram/Weather-App-/blob/main/public/assets/images/Untitled.jpg?raw=true" alt="Application image" align="center"> 
+
+<br>
+<br>
