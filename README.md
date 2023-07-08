@@ -2,7 +2,7 @@
 
 <h2>Desktop view of web App</h2>
 
-<img src="" alt="Application image">
+<img src="https://github.com/letswriteaprogram/Weather-App-/blob/main/public/assets/images/Untitled.jpg?raw=true" alt="Application image">
 <br>
 <hr>
 <br>
