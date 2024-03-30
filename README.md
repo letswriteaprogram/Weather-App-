@@ -26,6 +26,6 @@
 </ul>
 
 <br>
-<h1 align="center">Thankyou for visit us </h1>
+<h1 align="center">Thank you for visit us </h1>
 <br>
 <br>
