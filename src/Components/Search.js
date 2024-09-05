@@ -7,12 +7,12 @@ export default function Search(props) {
 <>
 
 <Wrapper>
-<CitySearch> 
-        <Input type="text" id="city" name="city" value={props.city} onChange={props.change} placeholder='Search City'></Input>
-        <Button onClick={props.Search}><i className="fa fa-search icon" ></i></Button>
+// <CitySearch> 
+//         <Input type="text" id="city" name="city" value={props.city} onChange={props.change} placeholder='Search City'></Input>
+//         <Button onClick={props.Search}><i className="fa fa-search icon" ></i></Button>
         
-</CitySearch>
-<CordinateSearch>
+// </CitySearch>
+// <CordinateSearch>
 <label htmlFor="cordinate"><span>Get Cordinate</span> </label>
 <Button onClick={props.location}>
 <i className="fa-solid fa-location-crosshairs icon" ></i>
