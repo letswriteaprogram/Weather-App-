@@ -79,7 +79,7 @@ align-items: center;
 
 const Input=styled.input`
 margin: 20px;
-padding: 10px;
+padding: 20px;
 height: 40px;
 background-color: rgba(0,0,0,.3);
 border: none;
